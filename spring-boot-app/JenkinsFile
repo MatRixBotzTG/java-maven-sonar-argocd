@@ -36,19 +36,7 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
-            steps {
-                dir('spring-boot-app') {
-                    withSonarQubeEnv('sonarqube') {
-                        sh '''
-                            mvn sonar:sonar \
-                              -Dsonar.projectKey=java-maven-sonar-argocd \
-                              -Dsonar.projectName="Java Maven Sonar ArgoCD"
-                        '''
-                    }
-                }
-            }
-        }
+        ALPESHKUMAr@1999
 
         stage('Build Docker Image') {
             steps {
